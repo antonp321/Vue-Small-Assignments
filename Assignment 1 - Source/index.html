@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Vue App</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <div id="exercise">
+        <p v-once>VueJS is pretty cool - {{name}} {{age}}</p>
+        <p>{{mutlipledAge()}}</p>
+        <p>{{randomNum()}}</p>
+        <div>
+            <img v-bind:src="imgLink" style="width:100px;height:100px">
+        </div>
+        <div>
+            <input v-bind:value="name" v-on:input="changeName" type="text"><br/>
+            {{name}}
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

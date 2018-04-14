@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Vue App</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+
+    <div id="exercise">
+        <div>
+            <button v-on:click="alertFunc">Show Alert</button>
+        </div>
+        <div>
+            <input v-on:keydown="getValue" type="text">
+            <p>{{ value }}</p>
+        </div>
+        <div>
+            <input v-on:keydown.enter="getValue" type="text">
+            <p>{{ value }}</p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

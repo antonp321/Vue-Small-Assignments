@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Vue App</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <div id="exercise">
+        <div>
+            <button @click="showFirstParagraphs">Toggle</button>
+            <p v-if="firstParagraphs">You either see me ...</p>
+            <p v-else>...or me</p>
+            <p v-show="firstParagraphs">You either see me ...</p>
+            <p v-show="!firstParagraphs">...or me</p>
+        </div>
+        <ul>
+            <li v-for="(element, i) in array">{{i}}</li>
+        </ul>
+        <ul>
+            <li v-for="(v,k,i) in myObject">
+                {{i}} -> {{k}}:{{v}}
+            </li>
+        </ul>
+        <ul>
+            <li v-for="(v,k,i) in testData">
+                <div v-if="Array.isArray(v)">
+                    <ul>
+                        <li v-for="el in v">
+                            {{el}}
+                        </li>
+                    </ul>
+                </div>
+                <span v-else>{{v}}</span>
+            </li>
+        </ul>
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
